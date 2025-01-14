@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font: normal 1em Arial;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+            background: rgb(89, 214, 255);
+            height: 98vh;
+            width: 98vw;
+        }
+
+        div#bloco{
+            color: white;
+            text-align: center;
+            width: 500px;
+            height: 200px;
+            background: rgb(41, 194, 255);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.4)
+        }
+    </style>
+</head>
+<body>
+    <div id="bloco">
+        <h1>Verificador de Nacionalidade</h1>
+        <p>
+            Seu país de origem: <input type="text" name="txtpais" id="txtpais"> <input type="button" value="Verificar" id="bot" onclick="verificar()">
+        </p>
+        <div id="res"></div>
+    </div>
+
+    <script>
+        function verificar(){
+            var txtp = window.document.querySelector('input#txtpais')
+            var país = txtp.value
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `<p>Vivendo em <strong>${país}...</strong></p>`
+            if (país == 'Brasil'){
+                res.innerHTML += '<p>Você é <strong>Brasileiro!</strong><p>'
+            }else{
+                res.innerHTML += '<p>Você é <strong>Estrangeiro</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
