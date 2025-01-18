@@ -19,15 +19,6 @@ section {
     box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
 }
 
-div {
-    text-align: center;
-    padding: 8px;
-}
-
-img {
-    width: 250px;
-}
-
 footer {
     color: white;
     text-align: center;
