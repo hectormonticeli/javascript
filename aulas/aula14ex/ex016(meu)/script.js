@@ -11,7 +11,7 @@ function contar() {
         fim = Number(fim.value)
         passo = Number(passo.value)
 
-        if (passo.value == 0) {
+        if (passo == 0) {
             window.alert('Passo inválido! Considerando PASSO 1')
             passo = 1
         }
@@ -20,9 +20,9 @@ function contar() {
 
         for(var c = inicio; c <= fim; c += passo) {
             res.innerHTML += c
-            res.innerHTML += ' --> '
+            res.innerHTML += '&#128073;'
         }
 
-        res.innerHTML += 'fim'
+        res.innerHTML += '&#127988;'
     }
 }
